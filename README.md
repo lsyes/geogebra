@@ -28,16 +28,31 @@
 | **网页版** | `./gradlew :web:run` | 启动开发服务器（默认端口 8888）。 |
 
 ---
+### 💻 运行应用程序
+1. 运行网页版
+要从命令行启动网页版，请运行以下命令：
 
-## 💻 运行桌面版 (GeoGebra Classic 5)
+Bash
 
-运行桌面版的最简单方式是使用 Gradle 命令：
+./gradlew :web:run
 
-```bash
+您可以运行 ./gradlew :web:tasks 来列出其他可用的任务和选项。
+
+2. 运行桌面版 (GeoGebra Classic 5)
+运行桌面版的最简单方式是使用 Gradle 命令。
+
+Bash
+
 ./gradlew :desktop:desktop:run
-##构建过程
-...txt
-lsyes@lsyes-loongsonls3a60007a20001wv01crb:~/geogebra$ ./gradlew :desktop:run Starting a Gradle Daemon (subsequent builds will be faster)
+您可以运行 ./gradlew :desktop:tasks 来列出其他可用的任务和选项。
+
+构建过程
+以下是尝试构建桌面版时的详细记录：
+
+Bash
+
+lsyes@lsyes-loongsonls3a60007a20001wv01crb:~/geogebra$ ./gradlew :desktop:run 
+Starting a Gradle Daemon (subsequent builds will be faster)
 
 Configure project :shared Kotlin does not yet support 25 JDK target, falling back to Kotlin JVM_24 JVM target
 
@@ -59,7 +74,8 @@ Try:
 
 Run gradlew tasks to get a list of available tasks. For more on name expansion, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:name_abbreviation in the Gradle documentation. Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to generate a Build Scan (powered by Develocity). Get more help at https://help.gradle.org.
 
-BUILD FAILED in 53s 9 actionable tasks: 9 executed lsyes@lsyes-loongsonls3a60007a20001wv01crb:~/geogebra$ ./gradlew :desktop:desktop:run
+BUILD FAILED in 53s 9 actionable tasks: 9 executed 
+lsyes@lsyes-loongsonls3a60007a20001wv01crb:~/geogebra$ ./gradlew :desktop:desktop:run
 
 Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED Task :build-logic:convention:generateExternalPluginSpecBuilders UP-TO-DATE Task :build-logic:convention:extractPrecompiledScriptPluginPlugins UP-TO-DATE Task :build-logic:convention:compilePluginsBlocks UP-TO-DATE Task :build-logic:convention:generatePrecompiledScriptPluginAccessors UP-TO-DATE Task :build-logic:convention:generateScriptPluginAdapters UP-TO-DATE
 
@@ -130,3 +146,4 @@ class org.geogebra.desktop.gui.view.algebra.AlgebraViewD 19:37:41.578 WARN: org.
 [Incubating] Problems report is available at: file:///home/lsyes/geogebra/build/reports/problems/problems-report.html
 
 BUILD SUCCESSFUL in 1m 26s 39 actionable tasks: 30 executed, 9 up-to-date Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html lsyes@lsyes-loongsonls3a60007a20001wv01crb:~/geogebra$
+
